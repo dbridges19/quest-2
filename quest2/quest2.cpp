@@ -8,7 +8,7 @@ int main()
 {
     Account testDummy, testDummier;
    
-   
+    Transfer(testDummy, testDummier);
 
 
 }
