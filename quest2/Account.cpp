@@ -10,6 +10,7 @@ Account::Account() {
 	
 }
 
+
 bool Account::pay_in() {
 	float deposit;
 
@@ -40,3 +41,4 @@ bool Account::pay_out() {
 	else return false;
 
 }
+
