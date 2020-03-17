@@ -10,9 +10,9 @@ public:
 	Account();
 	bool pay_in(float x);
 	bool pay_out(float x);
+	int id;
 
 private:
-	int id;
 	int pin;
 	float balance;
 
