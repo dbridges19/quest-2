@@ -10,6 +10,8 @@ public:
 	Account();
 	bool pay_in(float x);
 	bool pay_out(float x);
+	void setPin(int x);
+	int getPin(int x);
 	int id;
 
 private:

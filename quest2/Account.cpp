@@ -25,6 +25,14 @@ bool Account::pay_in(float x) {
 	else return false;
 }
 
+void Account::setPin(int x) {
+	x = pin;
+}
+int Account::getPin(int x) {
+	pin = x;
+	return x;
+}
+
 bool Account::pay_out(float x) {
 	float withdrawAmmount;
 
