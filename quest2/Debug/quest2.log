@@ -1,4 +1,2 @@
-﻿  Database.cpp
-C:\Users\MrMythikk\Documents\GitHub\quest-2\quest2\Database.cpp(4,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\MrMythikk\Documents\GitHub\quest-2\quest2\Database.cpp(10): warning C4715: 'Database::findAccount': not all control paths return a value
+﻿  Interaction.cpp
   quest2.vcxproj -> C:\Users\MrMythikk\Documents\GitHub\quest-2\Debug\quest2.exe

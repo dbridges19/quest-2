@@ -7,18 +7,10 @@ using namespace std;
 
 int main()
 {
-    Account testDummy, testDummier;
-    Database mainDB;
-   
-    testDummy.id = 1;
-    testDummier.id = 2;
+    Interaction display;
 
-    mainDB.addAccount(testDummy);
-    mainDB.addAccount(testDummier);
+    display.mainMenu();
 
-    if (mainDB.findAccount(1)) {
-        cout << "Ladies and gentlemen. We got em.";
-    }
 
 }
 
