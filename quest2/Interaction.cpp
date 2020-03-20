@@ -9,6 +9,8 @@ void Interaction::mainMenu() {
     Database mainDB;
     int menuChoice = 0;
     int accountsSize = 0;
+    bool loggedIn = false; //If user is logged in
+    Account currAccount; //Placeholder
 
     while (menuChoice == 0) {
         cout << "Welcome to the Orgimar Bank and Trust!" << endl
@@ -34,7 +36,7 @@ void Interaction::mainMenu() {
                 menuChoice = 0;
             }
 
-        if (menuChoice == 2) {
+        if (menuChoice == 2) { //Login
             int searchID;
             int searchPin;
             cout << "Please enter your account ID";
@@ -43,7 +45,9 @@ void Interaction::mainMenu() {
                     cout << "Please enter your pin";
                     cin >> searchPin;
                     if (mainDB.matchPin(searchPin)) {
-                        cout << "yes";
+                        loggedIn = true;
+                        currAccount.id = mainDB.findAccount(searchID);  
+                        menuChoice = 0;
                     }
                 }
                 else {
@@ -51,7 +55,32 @@ void Interaction::mainMenu() {
                 }
         }
 
-        if (menuChoice == 3) {
+        if (menuChoice == 3) { //Display balance (telling it to display account info for test case)
+            float balance;
+            if (loggedIn == true) {
+                balance = currAccount.getBalance(currAccount);
+                cout << "Your current balance is $" << balance << endl;
+                cout << "Your ID is: " << currAccount.id << endl;
+                cout << "Your pin is: " << currAccount.getPin(currAccount.id) << endl;
+            }
+        }
+
+        if (menuChoice == 4) { //Transfer money
+            int userID;
+            int transferID;
+            cout << "Please enter the ID of your account";
+            cin >> userID;
+            cout << "Please enter the ID of the account you wish to transfer to";
+            cin >> transferID;
+            Transfer(mainDB.getAccount(userID), mainDB.getAccount(transferID));
+        }
+
+        if (menuChoice == 5) { //Logout of account
+            loggedIn = false;
+            currAccount = Account(); //CHange local current account to default constructor.
+        }
+
+        if (menuChoice == 6) { //End program
 
         }
     }

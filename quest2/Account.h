@@ -12,6 +12,8 @@ public:
 	bool pay_out(float x);
 	void setPin(int x);
 	int getPin(int x);
+	float getBalance(Account x);
+	void setBalance(float x);
 	int id;
 
 private:

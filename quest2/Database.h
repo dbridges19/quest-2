@@ -11,6 +11,7 @@ public:
 	bool findAccount(int x);
 	void addAccount(Account const& a);
 	bool matchPin(int x);
+	Account getAccount(int x);
 
 private:
 	vector<Account> accounts;

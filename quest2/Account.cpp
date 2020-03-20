@@ -4,7 +4,7 @@
 using namespace std;
 
 Account::Account() {
-	balance = 20;
+	balance = 20; //set it to 20 to test transfer :)
 	pin = 0;
 	id = 0;
 	
@@ -25,12 +25,20 @@ bool Account::pay_in(float x) {
 	else return false;
 }
 
-void Account::setPin(int x) {
-	x = pin;
+void Account::setPin(int x) { 
+	pin = x;
 }
 int Account::getPin(int x) {
-	pin = x;
+	x = pin;
 	return x;
+}
+
+float Account::getBalance(Account x) {
+	return x.balance;
+}
+
+void Account::setBalance(float x) {
+	balance = x;
 }
 
 bool Account::pay_out(float x) {
